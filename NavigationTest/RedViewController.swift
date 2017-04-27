@@ -10,6 +10,13 @@ import UIKit
 
 class RedViewController: UIViewController {
 
+    @IBAction func delegateChnageBackColor(_ sender: Any) {
+        
+        if let appdelegate = UIApplication.shared.delegate as? AppDelegate{
+            appdelegate.bgColor = UIColor.yellow
+        }
+        
+    }
     @IBOutlet var receivedLabel: UILabel!
     
     var receivedValue:String? = nil

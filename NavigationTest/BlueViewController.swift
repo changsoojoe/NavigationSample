@@ -21,6 +21,13 @@ class BlueViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let appdelegate = UIApplication.shared.delegate as? AppDelegate{
+            self.view.backgroundColor = appdelegate.bgColor
+        }
     }
 
     override func didReceiveMemoryWarning() {
